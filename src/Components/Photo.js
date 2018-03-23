@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 
 const Photo = (props) => {
+
     const post = props.post;
     return (
       <figure className="figure">
@@ -12,16 +13,19 @@ const Photo = (props) => {
         </figcaption>
         <div className="button-container">
           <button 
-            onClick={() => props.onRemovePhoto(post)}>
+            onClick={() => {
+              props.removePost(props.index)
+            }}>
           Remove</button>
         </div>
       </figure>
     );
 }
 
+
+
 Photo.propTypes = {
-  post: PropTypes.object.isRequired,
-  onRemovePhoto: PropTypes.func.isRequired
+  post: PropTypes.object.isRequired
 }
 
 export default Photo;

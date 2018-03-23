@@ -14,7 +14,9 @@ const PhotoWall = (props) => {
           <Photo 
             key={post.id}
             post={post}
-            onRemovePhoto={props.onRemovePhoto} />
+            index= {index}
+            {...props} 
+            />
           )
         }
       </div>
@@ -24,8 +26,8 @@ const PhotoWall = (props) => {
 
 
 PhotoWall.propTypes = {
-  posts: PropTypes.array.isRequired,
-  onRemovePhoto: PropTypes.func.isRequired
+  posts: PropTypes.array.isRequired
+
 }
 
 export default PhotoWall;
