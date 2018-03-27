@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const PhotoWall = (props) => {
   return (
     <div>
-      <Link to="/AddPhoto" className="add-icon"></Link>
+      <Link to="/AddPhoto" className="addIcon"></Link>
     <div className="photo-grid">
         {props.posts
         .sort((x, y) => y.id - x.id)
